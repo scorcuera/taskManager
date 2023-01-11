@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&family=Roboto:ital,wght@0,300;1,100;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/styles/reset.css">
+    <link rel="stylesheet" href="./src/styles/home.css">
     <title>Task Manager</title>
 </head>
 <body>
-    
+    <header>
+        <div class="header__image">
+            <img src="./assets/img/snake_nietzsche.png" alt="snake eating itself, representing Nietzsche's eternal return">
+        </div>
+        <h1 class="header__title">Task Manager</h1>
+    </header>
+    <main>
+        <div class="main__form">
+            <form action="">
+                <div class="main__form-input">
+                    <label for="newTask">Enter a new task:</label>
+                    <input type="text">
+                </div>
+                <div class="main__form-buttons">
+                    <button class="main__form-buttons--submit" type="submit">Add</button>
+                    <button class="main__form-buttons--load" type="button">Load tasks</button>
+                </div>
+            </form>
+        </div>
+        <div>
+
+        </div>
+    </main>
 </body>
 </html>
