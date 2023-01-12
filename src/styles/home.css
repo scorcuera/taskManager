@@ -84,3 +84,8 @@ header {
 .main__form-buttons--submit:load {
     background-color: rgb(49, 190, 228);
 }
+
+.main__form-input input {
+    height: 2rem;
+    border: 0.5px solid lightgray;
+}
