@@ -1,19 +1,24 @@
 {
-    "tasks": [
-        {
-            "name": "cook dinner",
-            "done": false,
-            "id": 1
-        },
-        {
-            "name": "practice JS",
-            "done": false,
-            "id": 2
-        },
-        {
-            "name": "work out",
-            "done": false,
-            "id": 3
-        }
-    ]
+  "tasks": [
+    {
+      "name": "cook dinner",
+      "done": false,
+      "id": 1
+    },
+    {
+      "name": "practice JS",
+      "done": false,
+      "id": 2
+    },
+    {
+      "name": "work out",
+      "done": false,
+      "id": 3
+    },
+    {
+      "name": "dance",
+      "done": false,
+      "id": 4
+    }
+  ]
 }

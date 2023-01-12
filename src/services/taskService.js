@@ -1,5 +1,3 @@
-import axios from "axios";
-
 const apiClient = axios.create({
     baseURL: 'http://localhost:3000',
     withCredentials: false,
@@ -10,16 +8,19 @@ const apiClient = axios.create({
 })
 
 export const taskService = {
-    getTasks() {
-        return apiClient.get("/tasks")
+    async getTasks() {
+        let response = await apiClient.get("/tasks");
+        let allTasks = response.data;
+        console.log(allTasks);
+        return allTasks;
     },
-    submitTask(newTask){
-        return apiClient.post("/tasks", newTask)
+    async submitTask(newTask){
+        await apiClient.post("/tasks", newTask)
     },
-    deleteTask(id){
-        return apiClient.delete("/tasks/" + id)
+    async deleteTask(id){
+        await apiClient.delete("/tasks/" + id)
     },
-    updateTask(id, updatedTask){
-        return apiClient.patch("/tasks/" + id, updatedTask)
+    async updateTask(id, updatedTask){
+        await apiClient.patch("/tasks/" + id, updatedTask)
     }
 }
