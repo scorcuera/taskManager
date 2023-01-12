@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/scorcuera/taskManager/issues"
   },
-  "homepage": "https://github.com/scorcuera/taskManager#readme"
+  "homepage": "https://github.com/scorcuera/taskManager#readme",
+  "devDependencies": {
+    "json-server": "^0.17.1"
+  }
 }
