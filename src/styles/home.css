@@ -89,3 +89,28 @@ header {
     height: 2rem;
     border: 0.5px solid lightgray;
 }
+
+.main__container {
+    margin-top: 3rem;
+}
+
+.main__container-task{
+    max-width: 100%;
+    height: 5rem;
+    background-color: rgba(223, 115, 115, 0.484);
+    margin: 0.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    filter: drop-shadow(0 0 0.15rem crimson);
+}
+
+.main__container-task--name {
+    margin-left: 1rem;
+}
+
+.main__container-task--icons {
+    margin-right: 1rem;
+}
+
