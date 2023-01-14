@@ -18,7 +18,7 @@ export const taskHandler = {
         return taskService.getTasks();
     },
     deleteTask(id){
-
+        return taskService.deleteTask(id);
     },
     updateTask(id, newTask){
 

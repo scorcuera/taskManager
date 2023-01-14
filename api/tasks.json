@@ -1,11 +1,6 @@
 {
   "tasks": [
     {
-      "name": "cook dinner",
-      "done": false,
-      "id": 1
-    },
-    {
       "name": "practice JS",
       "done": false,
       "id": 2

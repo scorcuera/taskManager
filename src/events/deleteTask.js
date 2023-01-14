@@ -1,9 +1,13 @@
+import { taskHandler } from "../handlers/taskHandler.js";
+
 function enableDeleteListener() {
     let deleteButtonEl = document.querySelectorAll(".main__container-task--icons .fa-trash");
 
     [...deleteButtonEl].map(button => {
         button.addEventListener("click", (event) => {
+            let taskId = event.target.dataset.task;
             console.log(event.target.dataset.task);
+            taskHandler.deleteTask(taskId);
         })
     })
 }
