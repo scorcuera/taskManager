@@ -6,14 +6,19 @@
       "id": 2
     },
     {
-      "name": "work out",
-      "done": false,
-      "id": 3
-    },
-    {
       "name": "dance",
       "done": false,
       "id": 4
+    },
+    {
+      "name": "cook ceviche",
+      "done": false,
+      "id": 5
+    },
+    {
+      "name": "practice guitar",
+      "done": false,
+      "id": 6
     }
   ]
 }

@@ -2,7 +2,7 @@ export function printTasks(arrayTasks) {
     let templateHTML = "";
     arrayTasks.map(task => {
         templateHTML+= `
-        <div class="main__container-task">
+        <div class="main__container-task" data-task="${task.id}">
             <div class="main__container-task--name">
                 <h1>${task.name}</h1>
             </div>

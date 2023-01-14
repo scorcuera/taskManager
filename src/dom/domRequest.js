@@ -3,12 +3,15 @@ export const domRequest = {
         let inputEl = document.querySelector(".main__form-input input").value;
         return inputEl;
     },
-    getTasksEl(){
+    getTasksElements(){
         let tasksEl = document.querySelector(".main__container");
         return tasksEl;
     },
-    getTaskEl() {
-        let taskEl = document.querySelector(".main__container-task");
-        return taskEl;
-    }
+    getTask(id) {
+        let tasksElements = document.querySelectorAll(".main__container-task");
+        let task = [...tasksElements].filter(task => {
+            return task.dataset.task == id;
+        })
+        return task[0];
+    },
 }
