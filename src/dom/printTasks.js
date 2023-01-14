@@ -7,8 +7,8 @@ export function printTasks(arrayTasks) {
                 <h1>${task.name}</h1>
             </div>
             <div class="main__container-task--icons">
-                <i class="fa-regular fa-pen-to-square fa-2x"></i>
-                <i class="fa-solid fa-trash fa-2x"></i>
+                <a><i class="fa-regular fa-pen-to-square fa-2x" data-task="${task.id}"></i></a>
+                <a><i class="fa-solid fa-trash fa-2x" data-task="${task.id}"></i></a>
             </div>
         </div>
         `

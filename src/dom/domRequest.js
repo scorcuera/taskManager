@@ -6,5 +6,9 @@ export const domRequest = {
     getTasksEl(){
         let tasksEl = document.querySelector(".main__container");
         return tasksEl;
+    },
+    getTaskEl() {
+        let taskEl = document.querySelector(".main__container-task");
+        return taskEl;
     }
 }
