@@ -16,8 +16,21 @@ export const printers = {
         })
         return templateHTML;
     },
-    printEditingTask() {
-        
+    printEditingTask(task) {
+        let templateHTML = `
+        <div class="main__container--editing-task" data-task=${task.id}>
+            <h1 class="main__container--editing-task--name">Editing ${task.name} </h1>
+            <div class="main__container--editing-task--form">
+                <label>Introduce a new name:</label>
+                <input type="text" placeholder="${task.name}"></input>
+                <div class="main__container--editing-task--form--buttons">
+                    <a class="main__container-task--form--buttons--save" data-task="${task.id}">Save</a>
+                    <a class="main__container-task--form--buttons--back">Back</a>
+                </div>
+            </div>
+        </div>
+        `;
+        return templateHTML;
     }
 
 }

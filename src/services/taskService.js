@@ -14,7 +14,7 @@ export const taskService = {
         return allTasks;
     },
     async getTask(id) {
-        let response = apiClient.get("/tasks/" + id);
+        let response = await apiClient.get("/tasks/" + id);
         let task = response.data;
         return task;
     },

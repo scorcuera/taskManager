@@ -14,6 +14,16 @@
       "name": "cook ceviche",
       "done": false,
       "id": 5
+    },
+    {
+      "name": "practice C#",
+      "done": false,
+      "id": 6
+    },
+    {
+      "name": "do homework",
+      "done": false,
+      "id": 7
     }
   ]
 }
