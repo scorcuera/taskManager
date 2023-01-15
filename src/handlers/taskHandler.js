@@ -23,7 +23,19 @@ export const taskHandler = {
     deleteTask(id){
         return taskService.deleteTask(id);
     },
-    updateTask(id, newTask){
+    updateTask(newTask){
+        if (!newTask) {
+            return;
+        }
 
+        let newTaskModel = {
+            "name": newTask.name,
+            "done": false,
+            "id": newTask.id
+        }
+
+        let id = newTaskModel.id;
+
+        return taskService.updateTask(id, newTaskModel);
     }
 }

@@ -8,7 +8,6 @@ async function loadTask(taskId) {
     let task = await taskHandler.loadTask(taskId);
     let taskHTML = printers.printEditingTask(task);
     taskContainer.innerHTML = taskHTML;
-    localStorage.clear();
 }
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -1,6 +1,6 @@
 export const domRequest = {
     getInputValue(){
-        let inputEl = document.querySelector(".main__form-input input").value;
+        let inputEl = document.querySelector(".main__form-input input, .main__container--editing-task--form--input").value;
         return inputEl;
     },
     getTasksElements(){
