@@ -11,8 +11,12 @@ export const taskService = {
     async getTasks() {
         let response = await apiClient.get("/tasks");
         let allTasks = response.data;
-        console.log(allTasks);
         return allTasks;
+    },
+    async getTask(id) {
+        let response = apiClient.get("/tasks/" + id);
+        let task = response.data;
+        return task;
     },
     async submitTask(newTask){
         await apiClient.post("/tasks", newTask)

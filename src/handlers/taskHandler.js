@@ -17,6 +17,9 @@ export const taskHandler = {
     loadTasks(){
         return taskService.getTasks();
     },
+    loadTask(id) {
+        return taskService.getTask(id);
+    },
     deleteTask(id){
         return taskService.deleteTask(id);
     },

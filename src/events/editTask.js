@@ -1,6 +1,10 @@
-import { taskHandler } from "../handlers/taskHandler.js";
-import { domRequest } from "../dom/domRequest.js";
-import { enableTaskEditMode } from "../dom/editMode.js";
+function saveObject(taskId) {
+    window.localStorage.setItem("taskId", taskId);
+}
+
+function changePage(page) {
+    window.location.href = page;
+}
 
 function enableEditListener() {
     let editButtonElements = document.querySelectorAll(".main__container-task--icons .fa-pen-to-square");
@@ -8,8 +12,8 @@ function enableEditListener() {
     [...editButtonElements].map(button => {
         button.addEventListener("click", (event) => {
             let taskId = event.target.dataset.task;
-            let task = domRequest.getTask(taskId);
-            enableTaskEditMode(task);       
+            saveObject(taskId);
+            changePage('../../edit.html');
         })
     })
 }

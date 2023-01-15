@@ -7,11 +7,25 @@ export const domRequest = {
         let tasksEl = document.querySelector(".main__container");
         return tasksEl;
     },
-    getTask(id) {
+    getTaskElement(id) {
         let tasksElements = document.querySelectorAll(".main__container-task");
         let task = [...tasksElements].filter(task => {
             return task.dataset.task == id;
         })
         return task[0];
     },
+    getTaskNameEl(id) {
+        let tasksElements = document.querySelectorAll(".main__container-task");
+        let task = [...tasksElements].filter(task => {
+            return task.dataset.task == id;
+        })
+        return task[0].querySelector(".main__container-task--name");
+    },
+    getTaskEditIconEl(id) {
+        let tasksElements = document.querySelectorAll(".main__container-task");
+        let task = [...tasksElements].filter(task => {
+            return task.dataset.task == id;
+        })
+        return task[0].querySelector(".main__container-task--icons--edit");
+    }
 }

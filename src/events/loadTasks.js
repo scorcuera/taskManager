@@ -1,10 +1,10 @@
 import { taskHandler } from "../handlers/taskHandler.js";
-import { printTasks } from "../dom/printTasks.js";
+import { printers } from "../dom/printers.js";
 import { domRequest } from "../dom/domRequest.js";
 
 async function loadTasks() {
     let tasks = await taskHandler.loadTasks();
-    let tasksHTML = printTasks(tasks);
+    let tasksHTML = printers.printTasks(tasks);
     let tasksEl = domRequest.getTasksElements();
     tasksEl.innerHTML = tasksHTML;
 }
