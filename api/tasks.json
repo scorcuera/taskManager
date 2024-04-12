@@ -1,29 +1,24 @@
 {
-  "tasks": [
-    {
-      "name": "practice JS",
-      "done": false,
-      "id": 2
-    },
-    {
-      "name": "dance",
-      "done": false,
-      "id": 4
-    },
-    {
-      "name": "cook ceviche",
-      "done": false,
-      "id": 5
-    },
-    {
-      "name": "practice C#",
-      "done": false,
-      "id": 6
-    },
-    {
-      "name": "do homework",
-      "done": false,
-      "id": 7
-    }
-  ]
+    "tasks": [
+        {
+            "name": "practice JS",
+            "done": false,
+            "id": 2
+        },
+        {
+            "name": "dance",
+            "done": false,
+            "id": 4
+        },
+        {
+            "name": "cook ceviche",
+            "done": false,
+            "id": 5
+        },
+        {
+            "name": "practice C#",
+            "done": false,
+            "id": 6
+        }
+    ]
 }
