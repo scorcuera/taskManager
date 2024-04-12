@@ -4,7 +4,7 @@ Task Manager
 
 ## Introduction
 
-
+A simple yet deep CRUD application. HTML, CSS and JS, but delving deep into their foundations.
 
 
 ## Features
@@ -38,3 +38,4 @@ Open the `index.html` file in your browser.
 
 ## Highlights
 
+Using JS frameworks has become a programming paradigm nowadays, for several good reasons. Nevertheless, it is important not to forget that, at the end, everything is HTML, CSS and JS, and that one can learn a lot of JS by using its vanilla version. This project has allowed me to boost my expertise of this programming language, as well as plunging deep into the best practices with HTML semantic tags and CSS architecture.
