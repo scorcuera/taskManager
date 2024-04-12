@@ -14,14 +14,20 @@ function changePage(page) {
 }
 
 function enableSaveListener() {
-
     let saveButtonEl = document.querySelector(".main__container-task--form--buttons--save");
+    let returnHomeButton = document.querySelector(".main__container-task--form--buttons--back");
+
     saveButtonEl.addEventListener("click", () => {
         let updatedTask = domRequest.getInputValue();
         let taskId = localStorage.getItem("taskId");
         saveTask(updatedTask, taskId);
         localStorage.clear();
         changePage("../../index.html");
+    })
+
+    returnHomeButton.addEventListener("click", () => {
+        console.log("holi")
+        changePage('../../index.html');
     })
 }
 
