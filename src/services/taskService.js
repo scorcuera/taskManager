@@ -1,30 +1,39 @@
-const apiClient = axios.create({
-    baseURL: 'http://localhost:3000',
-    withCredentials: false,
+const baseUrl = "http://localhost:3000";
+
+const fetchApi = async (endpoint, options) => {
+  const response = await fetch(baseUrl + endpoint, {
+    ...options,
+    credentials: "omit",
     headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json'
-    }
-})
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      ...options.headers,
+    },
+  });
+  const data = await response.json();
+  return data;
+};
 
 export const taskService = {
-    async getTasks() {
-        let response = await apiClient.get("/tasks");
-        let allTasks = response.data;
-        return allTasks;
-    },
-    async getTask(id) {
-        let response = await apiClient.get("/tasks/" + id);
-        let task = response.data;
-        return task;
-    },
-    async submitTask(newTask){
-        await apiClient.post("/tasks", newTask)
-    },
-    async deleteTask(id){
-        await apiClient.delete("/tasks/" + id)
-    },
-    async updateTask(id, updatedTask){
-        await apiClient.patch("/tasks/" + id, updatedTask)
-    }
-}
+  async getTasks() {
+    return fetchApi("/tasks", { method: "GET"});
+  },
+  async getTask(id) {
+    return fetchApi("/tasks/" + id, { method: "GET"});
+  },
+  async submitTask(newTask) {
+    return fetchApi("/tasks", {
+      method: "POST",
+      body: JSON.stringify(newTask),
+    });
+  },
+  async deleteTask(id) {
+    return fetchApi("/tasks/" + id, { method: "DELETE" });
+  },
+  async updateTask(id, updatedTask) {
+    return fetchApi("/tasks/" + id, {
+      method: "PATCH",
+      body: JSON.stringify(updatedTask),
+    });
+  },
+};
